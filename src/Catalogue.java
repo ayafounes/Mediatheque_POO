@@ -18,4 +18,13 @@ public class Catalogue <T extends Document>{
             System.out.println(document.getTitre());
         }
     }
+    public static <T extends Comparable<T>> T max(List<T> liste){
+        T max = liste.get(0);
+        for(T document: liste){
+            if(document.compareTo(max)>0){
+                max = document;
+            }
+        }
+        return max;
+    }
 }

@@ -1,5 +1,5 @@
 
-public abstract class Document {
+public abstract class Document implements Comparable<Document>{
 
     private String titre;
 
@@ -12,4 +12,8 @@ public abstract class Document {
     }
 
     public abstract String descriptionCourte();
+
+    public int compareTo(Document document) {
+        return this.titre.compareTo(document.titre);
+    }
 }
