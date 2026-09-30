@@ -9,7 +9,9 @@ public class Catalogue <T extends Document>{
     }
     public T rechercherParTitre(String titre){
         for(T document: documents){
-            if(document.getTitre().equals(titre)){}
+            if(document.getTitre().equals(titre)){
+                return document;
+            }
         }
         return null;
     }
